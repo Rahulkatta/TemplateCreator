@@ -1,0 +1,1005 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+
+  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+  <script type="text/javascript">
+    var code = "<meta charset=\"UTF-8\">\n\
+    <title></title>\n\
+    <p><br />\n\
+      <meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">\n\
+      <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n\
+      <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge,chrome=1\">\n\
+      <meta name=\"format-detection\" content=\"telephone=no\"><!-- disable auto telephone linking in iOS -->\n\
+    </p>\n\
+    <title></title>\n\
+    <style type=\"text/css\">\n\
+      /* ========== Custom Font Import ========== */\n\
+    \n\
+      /* RESET STYLES */\n\
+      body,\n\
+      #bodyTable,\n\
+      #bodyCell,\n\
+      #bodyCell {\n\
+        height: 100% !important;\n\
+        margin: 0;\n\
+        padding: 0;\n\
+        width: 100% !important;\n\
+        font-family: \'AvenirNextLTPro-Regular\', \'Avenir Next\', \'HelveticaNeue\', \'Helvetica Neue\', Helvetica, Arial, \"Lucida Grande\", sans-serif;\n\
+      }\n\
+    \n\
+      table {\n\
+        /*border-collapse:collapse;*/\n\
+        border-spacing: 0px;\n\
+      }\n\
+    \n\
+      table[id=bodyTable] {\n\
+        width: 100% !important;\n\
+        margin: auto;\n\
+        max-width: 700px !important;\n\
+        color: #7A7A7A;\n\
+        font-weight: normal;\n\
+      }\n\
+    \n\
+      img,\n\
+      a img {\n\
+        border: 0;\n\
+        border-style: none;\n\
+        border-color: #ffffff;\n\
+        outline: none;\n\
+        text-decoration: none;\n\
+        height: auto;\n\
+        line-height: 100%;\n\
+      }\n\
+    \n\
+      a {\n\
+        text-decoration: none !important;\n\
+        font-family: \'AvenirNextLTPro-Regular\', \'Avenir Next\', \'HelveticaNeue\', \'Helvetica Neue\', Helvetica, Arial, \"Lucida Grande\", sans-serif;\n\
+      }\n\
+    \n\
+      h1,\n\
+      h2,\n\
+      h3,\n\
+      h4,\n\
+      h5,\n\
+      h6 {\n\
+        color: #363C43;\n\
+        font-weight: 500;\n\
+        font-family: \'AvenirNextLTPro-Medium\', \'Avenir Next\', \'HelveticaNeueMedium\', \'HelveticaNeue-Medium\', \'Helvetica Neue Medium\', \'HelveticaNeue\', \'Helvetica Neue\', Helvetica;\n\
+        font-size: 20px;\n\
+        line-height: 125%;\n\
+        text-align: Left;\n\
+        letter-spacing: normal;\n\
+        margin-top: 17px;\n\
+        margin-right: 0;\n\
+        margin-bottom: 13px;\n\
+        margin-left: 0;\n\
+        padding-top: 0;\n\
+        padding-bottom: 0;\n\
+        padding-left: 0;\n\
+        padding-right: 0;\n\
+      }\n\
+    \n\
+    \n\
+    \n\
+      /* CLIENT-SPECIFIC STYLES */\n\
+    \n\
+      .ReadMsgBody {\n\
+        width: 100%;\n\
+      }\n\
+    \n\
+      .ExternalClass {\n\
+        width: 100%;\n\
+      }\n\
+    \n\
+      /* Force Hotmail/Outlook.com to display emails at full width. */\n\
+    \n\
+      .ExternalClass,\n\
+      .ExternalClass p,\n\
+      .ExternalClass span,\n\
+      .ExternalClass font,\n\
+      .ExternalClass td,\n\
+      .ExternalClass div {\n\
+        line-height: 100%;\n\
+      }\n\
+    \n\
+      /* Force Hotmail/Outlook.com to display line heights normally. */\n\
+    \n\
+      table,\n\
+      td {\n\
+        mso-table-lspace: 0pt;\n\
+        mso-table-rspace: 0pt;\n\
+      }\n\
+    \n\
+      /* Remove spacing between tables in Outlook 2007 and up. */\n\
+    \n\
+      #outlook a {\n\
+        padding: 0;\n\
+      }\n\
+    \n\
+      /* Force Outlook 2007 and up to provide a \"view in browser\" message. */\n\
+    \n\
+      img {\n\
+        -ms-interpolation-mode: bicubic;\n\
+        display: block;\n\
+        outline: none;\n\
+        text-decoration: none;\n\
+      }\n\
+    \n\
+      /* Force IE to smoothly render resized images. */\n\
+    \n\
+      body,\n\
+      table,\n\
+      td,\n\
+      p,\n\
+      a,\n\
+      li,\n\
+      blockquote {\n\
+        -ms-text-size-adjust: 100%;\n\
+        -webkit-text-size-adjust: 100%;\n\
+        /*font-weight:normal!important;*/\n\
+      }\n\
+    \n\
+      /* Prevent Windows- and Webkit-based mobile platforms from changing declared text sizes. */\n\
+    \n\
+      .ExternalClass td[class=\"ecxflexibleContainerBox\"] h3 {\n\
+        padding-top: 13px !important;\n\
+      }\n\
+    \n\
+      /* Force hotmail to push 2-grid sub headers down */\n\
+    \n\
+      /* /\/\/\/\/\/\/\/\/ TEMPLATE STYLES /\/\/\/\/\/\/\/\/ */\n\
+    \n\
+      /* ========== Page Styles ========== */\n\
+    \n\
+      h1 {\n\
+        display: block;\n\
+        font-size: 26px;\n\
+        font-style: normal;\n\
+        font-weight: 500;\n\
+        line-height: 100%;\n\
+      }\n\
+    \n\
+      h2 {\n\
+        display: block;\n\
+        font-size: 20px;\n\
+        font-style: normal;\n\
+        font-weight: 500;\n\
+        line-height: 120%;\n\
+      }\n\
+    \n\
+      h3 {\n\
+        display: block;\n\
+        font-size: 17px;\n\
+        font-style: normal;\n\
+        font-weight: 500;\n\
+        line-height: 110%;\n\
+      }\n\
+    \n\
+      h4 {\n\
+        display: block;\n\
+        font-size: 18px;\n\
+        font-style: italic;\n\
+        font-weight: 500;\n\
+        line-height: 100%;\n\
+      }\n\
+    \n\
+      .flexibleImage {\n\
+        height: auto;\n\
+      }\n\
+    \n\
+      .linkRemoveBorder {\n\
+        border-bottom: 0 !important;\n\
+      }\n\
+    \n\
+      table[class=flexibleContainerCellDivider] {\n\
+        padding-bottom: 0 !important;\n\
+        padding-top: 0 !important;\n\
+      }\n\
+    \n\
+    \n\
+    \n\
+      body,\n\
+      #bodyTable {\n\
+        background-color: #F0F1F3;\n\
+      }\n\
+    \n\
+      #emailHeader {\n\
+        background-color: #F0F1F3;\n\
+      }\n\
+    \n\
+      #emailBody {\n\
+        background-color: #FFFFFF;\n\
+        /*border-collapse:collapse;*/\n\
+        border-spacing: 0px;\n\
+        box-shadow: 0 0 15px #E8EAEC;\n\
+        -moz-box-shadow: 0 0 15px #E8EAEC;\n\
+        -webkit-box-shadow: 0 0 15px #E8EAEC;\n\
+        border-radius: 5px;\n\
+        -webkit-border-radius: 5px;\n\
+        -moz-border-radius: 5px\n\
+      }\n\
+    \n\
+      #emailFooter {\n\
+        background-color: #F0F1F3;\n\
+      }\n\
+    \n\
+      .textContent,\n\
+      .textContentLast {\n\
+        color: #6B7075;\n\
+        font-family: \'AvenirNextLTPro-Regular\', \'Avenir Next\', \'HelveticaNeue\', \'Helvetica Neue\', Helvetica;\n\
+        font-size: 16px;\n\
+        line-height: 125%;\n\
+        text-align: left;\n\
+      }\n\
+    \n\
+      .textContent a,\n\
+      .textContentLast a {\n\
+        color: #205478;\n\
+        text-decoration: underline;\n\
+      }\n\
+    \n\
+      .nestedContainer {\n\
+        background-color: #F6F7F8;\n\
+        border: 1px solid #F3F3F5;\n\
+      }\n\
+    \n\
+      .emailButton {\n\
+        background-color: #205478;\n\
+        border-collapse: separate;\n\
+      }\n\
+    \n\
+      .buttonContent {\n\
+        color: #FFFFFF;\n\
+        font-family: \'AvenirNextLTPro-Regular\', \'Avenir Next\', \'HelveticaNeue\', \'Helvetica Neue\', Helvetica;\n\
+        font-size: 18px;\n\
+        font-weight: bold;\n\
+        line-height: 100%;\n\
+        padding: 15px;\n\
+        text-align: center;\n\
+      }\n\
+    \n\
+      .buttonContent a {\n\
+        color: #FFFFFF;\n\
+        display: block;\n\
+        text-decoration: none !important;\n\
+        border: 0 !important;\n\
+      }\n\
+    \n\
+      .emailCalendar {\n\
+        background-color: #FFFFFF;\n\
+        border: 1px solid #CCCCCC;\n\
+      }\n\
+    \n\
+      .emailCalendarMonth {\n\
+        background-color: #205478;\n\
+        color: #FFFFFF;\n\
+        font-family: \'AvenirNextLTPro-Regular\', \'Avenir Next\', \'HelveticaNeue\', \'Helvetica Neue\', Helvetica, Arial, sans-serif;\n\
+        font-size: 16px;\n\
+        font-weight: bold;\n\
+        padding-top: 10px;\n\
+        padding-bottom: 10px;\n\
+        text-align: center;\n\
+      }\n\
+    \n\
+      .emailCalendarDay {\n\
+        color: #205478;\n\
+        font-family: \'AvenirNextLTPro-Regular\', \'Avenir Next\', \'HelveticaNeue\', \'Helvetica Neue\', Helvetica, Arial, sans-serif;\n\
+        font-size: 60px;\n\
+        font-weight: bold;\n\
+        line-height: 100%;\n\
+        padding-top: 20px;\n\
+        padding-bottom: 20px;\n\
+        text-align: center;\n\
+      }\n\
+    \n\
+      .imageContentText {\n\
+        margin-top: 10px;\n\
+        line-height: 0;\n\
+      }\n\
+    \n\
+      .imageContentText a {\n\
+        line-height: 0;\n\
+      }\n\
+    \n\
+      #invisibleIntroduction {\n\
+        display: none !important;\n\
+        font-size: 1px\n\
+      }\n\
+    \n\
+      /* Removing the introduction text from the view */\n\
+    \n\
+      .ios-footer {\n\
+        color: #8D9196;\n\
+        text-decoration: none !important\n\
+      }\n\
+    \n\
+      .ios-footer a {\n\
+        color: #8D9196;\n\
+        text-decoration: none !important;\n\
+      }\n\
+    \n\
+      /*FRAMEWORK HACKS & OVERRIDES */\n\
+    \n\
+      span[class=ios-color-hack] a {\n\
+        color: #275100 !important;\n\
+        text-decoration: none !important;\n\
+      }\n\
+    \n\
+      /* Remove all link colors in IOS (below are duplicates based on the color preference) */\n\
+    \n\
+      span[class=ios-color-hack2] a {\n\
+        color: #205478 !important;\n\
+        text-decoration: none !important;\n\
+      }\n\
+    \n\
+      span[class=ios-color-hack3] a {\n\
+        color: #6B7075 !important;\n\
+        text-decoration: none !important;\n\
+      }\n\
+    \n\
+      .a[href^=\"tel\"],\n\
+      a[href^=\"sms\"] {\n\
+        text-decoration: none !important;\n\
+        color: #606060 !important;\n\
+        pointer-events: none !important;\n\
+        cursor: default !important;\n\
+      }\n\
+    \n\
+      .mobile_link a[href^=\"tel\"],\n\
+      .mobile_link a[href^=\"sms\"] {\n\
+        text-decoration: none !important;\n\
+        color: #606060 !important;\n\
+        pointer-events: auto !important;\n\
+        cursor: default !important;\n\
+      }\n\
+    \n\
+      /* MOBILE STYLES */\n\
+    \n\
+      @media only screen and (max-width: 615px) {\n\
+    \n\
+        /*////// CLIENT-SPECIFIC STYLES //////*/\n\
+    \n\
+        body {\n\
+          width: 100% !important;\n\
+          min-width: 100% !important;\n\
+        }\n\
+    \n\
+        /* Force iOS Mail to render the email at full width. */\n\
+    \n\
+        table[id=\"emailHeader\"],\n\
+        table[id=\"emailBody\"],\n\
+        table[id=\"emailFooter\"] {\n\
+          width: 100% !important;\n\
+          max-width: 700px;\n\
+        }\n\
+    \n\
+        table[class=\"flexibleContainer\"] {\n\
+          width: 100% !important;\n\
+        }\n\
+    \n\
+        td[class=\"flexibleContainerBox\"],\n\
+        td[class=\"flexibleContainerBox\"] table {\n\
+          display: block;\n\
+          width: 100%;\n\
+          text-align: left;\n\
+        }\n\
+    \n\
+        td[class=\"imageContent\"] img {\n\
+          height: auto !important;\n\
+          width: 100% !important;\n\
+          max-width: 100% !important;\n\
+        }\n\
+    \n\
+        img[class=\"flexibleImage\"] {\n\
+          height: auto !important;\n\
+          width: 100% !important;\n\
+          max-width: 100% !important;\n\
+        }\n\
+    \n\
+        img[class=\"flexibleImageSmall\"] {\n\
+          height: auto !important;\n\
+          width: auto !important;\n\
+        }\n\
+    \n\
+        table[class=\"flexibleContainerBoxNext\"] {\n\
+          padding-top: 30px !important;\n\
+        }\n\
+    \n\
+        table[class=\"emailButton\"] {\n\
+          width: 100% !important;\n\
+        }\n\
+    \n\
+        td[class=\"buttonContent\"] {\n\
+          padding: 0 !important;\n\
+        }\n\
+    \n\
+        td[class=\"buttonContent\"] a {\n\
+          padding: 15px !important;\n\
+        }\n\
+    \n\
+        /* FULL-WIDTH TABLES */\n\
+    \n\
+        table[class=\"responsive-table\"] {\n\
+          width: 100% !important;\n\
+        }\n\
+    \n\
+        /* UTILITY CLASSES FOR ADJUSTING PADDING ON MOBILE */\n\
+    \n\
+        td[class=\"padding\"] {\n\
+          padding: 10px 0px 10px 0px !important;\n\
+          text-align: center;\n\
+        }\n\
+    \n\
+        /* ADJUST BUTTONS ON MOBILE */\n\
+    \n\
+        td[class=\"mobile-wrapper\"] {\n\
+          padding: 10px 5% 15px 5% !important;\n\
+        }\n\
+    \n\
+        table[class=\"mobile-button-container\"] {\n\
+          margin: 0 auto;\n\
+          width: 100% !important;\n\
+        }\n\
+    \n\
+        a[class=\"mobile-button\"] {\n\
+          width: 80% !important;\n\
+          padding: 15px !important;\n\
+          border: 0 !important;\n\
+          font-size: 16px !important;\n\
+        }\n\
+      }\n\
+    \n\
+      @media only screen and (-webkit-device-pixel-ratio:.75) {\n\
+        /* Put CSS for low density (ldpi) Android layouts in here */\n\
+      }\n\
+    \n\
+      @media only screen and (-webkit-device-pixel-ratio:1) {\n\
+        /* Put CSS for medium density (mdpi) Android layouts in here */\n\
+      }\n\
+    \n\
+      @media only screen and (-webkit-device-pixel-ratio:1.5) {\n\
+        /* Put CSS for high density (hdpi) Android layouts in here */\n\
+      }\n\
+    \n\
+      /* end Android targeting */\n\
+    \n\
+      /* CONDITIONS FOR IOS DEVICES ONLY\n\
+    \n\
+                =====================================================*/\n\
+    \n\
+      @media only screen and (min-device-width : 320px) and (max-device-width:568px) {}\n\
+    \n\
+      /* end IOS targeting */\n\
+    </style>\n\
+    <center style=\"background-color:#F0F1F3;\">\n\
+      <table align=\"center\" style=\"text-align:center !important;background-color:#F0F1F3\" width=\"700\">\n\
+        <tbody>\n\
+          <tr>\n\
+            <td><span id=\"preHeader\" style=\"display: none;\">pre_text;</span></td>\n\
+          </tr>\n\
+          <tr>\n\
+            <td style=\"background:#F0F1F2;\">\n\
+              <table align=\"center\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" height=\"100%\" id=\"bodyTable\" style=\"table-layout: fixed;max-width: 100% !important;width: 100% !important;min-width: 100% !important;border-spacing: 0px;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;margin: 0;color: #7A7A7A;font-weight: normal;padding: 0;\n\
+                          font-family: \'AvenirNextLTPro-Regular\',\'Avenir Next\',\'HelveticaNeue\',\'Helvetica Neue\',Helvetica, Arial, &quot;Lucida Grande&quot;, sans-serif;background-color: #F0F1F3;height: 100% !important;\" width=\"100%\">\n\
+                <tbody>\n\
+                  <tr>\n\
+                    <td align=\"center\" id=\"bodyCell\"\n\
+                      style=\"mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;margin: 0;padding: 0;font-family: \'AvenirNextLTPro-Regular\',\'Avenir Next\',\'HelveticaNeue\',\'Helvetica Neue\',Helvetica, Arial, &quot;Lucida Grande&quot;, sans-serif;height: 100% !important;width: 100% !important;\"\n\
+                      valign=\"top\">\n\
+                      <!-- START WHITE CONTAINER SECTION -->\n\
+                      <!-- NOTE: REMOVE margin-bottom: 20px; FROM STYLES IF THERE\'s ONLY ONE CONTAINER -->\n\
+                      <table bgcolor=\"#F0F1F2\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" id=\"emailBody\" style=\"margin-bottom: 5px;border-radius: 5px;-webkit-border-radius: 5px;-moz-border-radius: 5px;border-spacing: 0px;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;max-width: 700px;\n\
+                                  background-color: #F0F1F2;box-shadow: 0 0 15px #E8EAEC;-moz-box-shadow: 0 0 15px #E8EAEC;-webkit-box-shadow: 0 0 15px #E8EAEC;width: 100% !important;\" width=\"700\">\n\
+                        <!-- MODULE ROW // -->\n\
+                        <tbody>\n\
+                          <tr>\n\
+                            <td align=\"center\" bgcolor=\"#F0F1F2\" style=\"mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;\" valign=\"top\">\n\
+                              <!-- CENTERING TABLE // -->\n\
+                              <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\"\n\
+                                style=\"color: #FFFFFF;border-radius: 4px 4px 0 0;-moz-border-radius: 4px 4px 0 0;-webkit-border-radius: 4px 4px 0 0;border-spacing: 0px;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;\"\n\
+                                width=\"100%\">\n\
+                                <tbody>\n\
+                                  <tr>\n\
+                                    <td align=\"center\" style=\"mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;background:#ffffff;border:out_border_px;px solid out_border_color;;\" valign=\"top\">\n\
+                                      <!-- FLEXIBLE CONTAINER // -->\n\
+                                      <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" class=\"flexibleContainer\"\n\
+                                        style=\"main_bg_color;; border-spacing: 0px;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;width: 100% !important;\" width=\"700\">\n\
+                                        <tbody>\n\
+                                          <tr>\n\
+                                            <td style=\"height_above_logo;px;\"></td>\n\
+                                          </tr>\n\
+                                          <tr>\n\
+                                            <td align=\"center\" class=\"flexibleContainerCell\" style=\"mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;\" valign=\"top\">\n\
+                                              <img src=\"logo_url\" alt=\"logo not found\" />\n\
+                                            </td>\n\
+                                          </tr>\n\
+                                          <tr>\n\
+                                            <td style=\"height_above_img;px;\"></td>\n\
+                                          </tr>\n\
+                                          <tr>\n\
+                                            <td style=\"text-align:center;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;\">\n\
+                                              <img src=\"img_url\" alt=\"image not found\" />\n\
+                                            </td>\n\
+                                          </tr>\n\
+                                          <tr>\n\
+                                            <td style=\"height_above_mtext;px;\">&nbsp;</td>\n\
+                                          </tr>\n\
+                                          <tr>\n\
+                                            <td align=\"center\" class=\"flexibleContainerCell\" style=\"mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;\" valign=\"top\" width=\"700\">\n\
+                                              <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" style=\"border-spacing: 0px;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;\" width=\"65%\">\n\
+                                                <tbody>\n\
+                                                  <tr>\n\
+                                                    <td align=\"center\" class=\"textContent\"\n\
+                                                      style=\"mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;color: #da1c3e; font-family: Arial; font-size: 16px;line-height: 125%;text-align: center;\"\n\
+                                                      valign=\"top\">\n\
+                                                      <div style=\"text-align:center; mtext_size;px; margin-bottom:0; mtext_color;; line-height:28px;\">\n\
+                                                        main_text;\n\
+                                                      </div>\n\
+                                                    </td>\n\
+                                                  </tr>\n\
+                                                  <tr>\n\
+                                                    <td style=\"height_above_book_now;px;\">&nbsp;</td>\n\
+                                                  </tr>\n\
+                                                  <tr>\n\
+                                                    <td align=\"center\" style=\"-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;mso-table-lspace:0pt;mso-table-rspace:0pt;\">\n\
+                                                      <table width=\"200\" align=\"center\" cellpadding=\"0\" cellspacing=\"0\" border=\"0\" bgcolor=\"#fff\"\n\
+                                                        style=\"border-radius:5px;color:white;font-weight:700;font-size:16px;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse !important;\">\n\
+                                                        <tr>\n\
+                                                          <td align=\"center\" valign=\"middle\" class=\"mcnButtonContent\"\n\
+                                                            style=\"padding: 18px;font-family: Arial;font-size: 16px;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%; book_now_bg_color;; border: book_now_border_px;px solid book_now_border_color;; border-radius:0px;\">\n\
+                                                            <a class=\"mcnButton \" href=\"book_now_link;\" target=\"_blank\"\n\
+                                                              style=\"font-weight: bold;letter-spacing: 2px;line-height: 100%;text-align: center;text-decoration: none; book_now_color;; mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;display: block;\">\n\
+                                                              <b>booking_text;</b>\n\
+                                                            </a>\n\
+                                                          </td>\n\
+                                                        </tr>\n\
+                                                      </table>\n\
+                                                    </td>\n\
+                                                  </tr>\n\
+                                                  <tr>\n\
+                                                    <td style=\"height_above_otext;px;\">&nbsp;</td>\n\
+                                                  </tr>\n\
+                                                  <tr>\n\
+                                                    <td align=\"center\" class=\"textContent\"\n\
+                                                      style=\"mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;color: #da1c3e; font-family: Arial; font-size: 16px;line-height: 125%;text-align: center;\"\n\
+                                                      valign=\"top\">\n\
+                                                      <div style=\"text-align:center; otext_size;px; margin-bottom:0; otext_color;; line-height:28px;\">\n\
+                                                        offer_text;\n\
+                                                      </div>\n\
+                                                    </td>\n\
+                                                  </tr>\n\
+                                                  <tr>\n\
+                                                    <td style=\"height_above_footer;px;\">&nbsp;</td>\n\
+                                                  </tr>\n\
+                                                </tbody>\n\
+                                              </table>\n\
+                                            </td>\n\
+                                          </tr>\n\
+                                          <tr>\n\
+                                            <td align=\"center\" style=\"mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;\" valign=\"top\">\n\
+                                              <!-- CENTERING TABLE // -->\n\
+                                              <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" style=\"border-spacing: 0px;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;\" width=\"100%\">\n\
+                                                <tbody>\n\
+                                                  <tr>\n\
+                                                    <td align=\"center\" style=\"footer_bg_color;; mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;\" valign=\"top\">\n\
+                                                      <!-- CENTERING TABLE // -->\n\
+                                                      <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" style=\"border-spacing: 0px;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;\" width=\"100%\">\n\
+                                                        <tbody>\n\
+                                                          <tr>\n\
+                                                            <td align=\"center\" style=\"mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;\" valign=\"top\">\n\
+                                                              <!-- FLEXIBLE CONTAINER // -->\n\
+                                                              <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" class=\"flexibleContainer\"\n\
+                                                                style=\"border-spacing: 0px;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;width: 100% !important;\" width=\"700\">\n\
+                                                                <tbody>\n\
+                                                                  <tr>\n\
+                                                                    <td style=\"height:20px\"></td>\n\
+                                                                  </tr>\n\
+                                                                  <tr>\n\
+                                                                    <td>\n\
+                                                                    <center>\n\
+                                                                      <table align=\"cente\" cellspacing=\"0\" cellpadding=\"0\">\n\
+                                                                        <tr>\n\
+                                                                          <!--social_media-->\n\
+                                                                          <td style=\"width:30px; padding: 0 0 0 0;\"><a target=\"_blank\" href=\"social_url_1;\">   <img width=\"30\" src=\"social_img_1;\" style=\"border:none;\"></a></td>\n\
+                                                                          <td style=\"width:20px;\"></td>\n\
+                                                                          <td style=\"width:30px; padding: 0 0 0 0;\"><a target=\"_blank\" href=\"social_url_2;\">   <img width=\"30\" src=\"social_img_2;\" style=\"border:none;\"></a></td>\n\
+                                                                          <td style=\"width:20px;\"></td>\n\
+                                                                          <td style=\"width:30px; padding: 0 0 0 0;\"><a target=\"_blank\" href=\"social_url_3;\">   <img width=\"30\" src=\"social_img_3;\" style=\"border:none;\"></a></td>\n\
+                                                                          <td style=\"width:20px;\"></td>\n\
+                                                                          <td style=\"width:30px; padding: 0 0 0 0;\"><a target=\"_blank\" href=\"social_url_4;\">   <img width=\"30\" src=\"social_img_4;\" style=\"border:none;\"></a></td>\n\
+                                                                          <td style=\"width:20px;\"></td>\n\
+                                                                          <td style=\"width:30px; padding: 0 0 0 0;\"><a target=\"_blank\" href=\"social_url_5;\">   <img width=\"30\" src=\"social_img_5;\" style=\"border:none;\"></a></td>\n\
+                                                                        </tr>\n\
+                                                                      </table>\n\
+                                                                    </center>\n\
+                                                                    </td>\n\
+                                                                  </tr>\n\
+                                                                  <tr>\n\
+                                                                    <td style=\"height:20px\"></td>\n\
+                                                                  </tr>\n\
+                                                                  <tr>\n\
+                                                                    <td align=\"center\" class=\"flexibleContainerCell\" style=\"mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;\" valign=\"top\" width=\"700\">\n\
+                                                                      <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" style=\"padding:0 0 0 0;border-spacing: 0px;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;\"\n\
+                                                                        width=\"100%\">\n\
+                                                                        <tbody>\n\
+                                                                          <tr>\n\
+                                                                            <td\n\
+                                                                              style=\"font-family: \'AvenirNextLTPro-Regular\',\'Avenir Next\',\'HelveticaNeue\',\'Helvetica Neue\',Helvetica,Arial,sans-serif; ftext_color;; ftext_size;px; text-align: center;line-height: 100%;padding-bottom: 8px;padding-top: 0px;padding-right: 25px;padding-left: 25px;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;\"\n\
+                                                                              valign=\"middle\">\n\
+                                                                              <p style=\"ftext-size;px;\">\n\
+                                                                                footer_text;\n\
+                                                                              </p>\n\
+                                                                            </td>\n\
+                                                                          </tr>\n\
+                                                                          <tr>\n\
+                                                                            <td style=\"height:5px\"></td>\n\
+                                                                          </tr>\n\
+                                                                        </tbody>\n\
+                                                                      </table>\n\
+                                                                    </td>\n\
+                                                                  </tr>\n\
+                                                                  <tr>\n\
+                                                                    <td style=\"height:10px\"></td>\n\
+                                                                  </tr>\n\
+                                                                </tbody>\n\
+                                                              </table>\n\
+                                                              <!-- // FLEXIBLE CONTAINER -->\n\
+                                                            </td>\n\
+                                                          </tr>\n\
+                                                        </tbody>\n\
+                                                      </table>\n\
+                                                      <!-- // CENTERING TABLE -->\n\
+                                                    </td>\n\
+                                                  </tr>\n\
+                                                </tbody>\n\
+                                              </table>\n\
+                                              <!-- // CENTERING TABLE -->\n\
+                                            </td>\n\
+                                          </tr>\n\
+                                        </tbody>\n\
+                                      </table>\n\
+                                    </td>\n\
+                                  </tr>\n\
+                                </tbody>\n\
+                              </table>\n\
+                            </td>\n\
+                          </tr>\n\
+                          <!-- // MODULE ROW -->\n\
+                          <!-- MODULE ROW // -->\n\
+                          <!-- // MODULE ROW W/ BUTTON -->\n\
+                          <!-- MODULE ROW // -->\n\
+                        </tbody>\n\
+                      </table>\n\
+                      <!-- // CENTERING TABLE -->\n\
+                    </td>\n\
+                  </tr>\n\
+                  <!-- // MODULE ROW -->\n\
+                </tbody>\n\
+              </table>\n\
+              <!-- END WHITE CONTAINER SECTION -->\n\
+              <!-- EMAIL FOOTER // -->\n\
+              <!--\n\
+                            The table \"emailBody\" is the email\'s container.\n\
+                            Its width can be set to 100% for a color band\n\
+                            that spans the width of the page.\n\
+                          -->\n\
+            </td>\n\
+          </tr>\n\
+        </tbody>\n\
+      </table>\n\
+      <!-- // END -->\n\
+    </center>";
+
+    $(document).ready(function() {
+
+      var backup = code;
+      download();
+
+      $("input").change(function() {
+        code = backup;
+        download();
+      });
+
+
+    });
+
+    function download() {
+
+      code = code.replace("pre_text;", document.getElementById('pre_text').value);
+      code = code.replace('main_bg_color;', 'background-color: #' + document.getElementById('main_bg_color').value);
+      code = code.replace('out_border_px;', document.getElementById('out_border_px').value);
+      code = code.replace('out_border_color;', '#' + document.getElementById('out_border_color').value);
+      code = code.replace('logo_url', document.getElementById('logo_url').value);
+      code = code.replace('height_above_logo;', 'height: ' + document.getElementById('height_above_logo').value);
+      code = code.replace('img_url', document.getElementById('img_url').value);
+      code = code.replace('height_above_img;', 'height: ' + document.getElementById('height_above_img').value);
+      code = code.replace('main_text;', document.getElementById('main_text').value);
+      code = code.replace('height_above_mtext;', 'height: ' + document.getElementById('height_above_mtext').value);
+      code = code.replace('mtext_size;', 'font-size: ' + document.getElementById('mtext_size').value);
+      code = code.replace('mtext_color;', 'color: #' + document.getElementById('mtext_color').value);
+      code = code.replace('book_now_link;', document.getElementById('book_now_link').value);
+      code = code.replace('height_above_book_now;', 'height: ' + document.getElementById('height_above_book_now').value);
+      code = code.replace('book_now_color;', 'color: #' + document.getElementById('book_now_color').value);
+      code = code.replace('book_now_bg_color;', 'background-color: #' + document.getElementById('book_now_bg_color').value);
+      code = code.replace('book_now_border_px;', document.getElementById('book_now_border_px').value);
+      code = code.replace('book_now_border_color;', '#' + document.getElementById('book_now_border_color').value);
+      code = code.replace('offer_text;', document.getElementById('offer_text').value);
+      code = code.replace('height_above_otext;', 'height: ' + document.getElementById('height_above_otext').value);
+      code = code.replace('otext_color;', 'color: #' + document.getElementById('otext_color').value);
+      code = code.replace('otext_size;', 'font-size: ' + document.getElementById('otext_size').value);
+      code = code.replace('footer_bg_color;', 'background-color: #' + document.getElementById('footer_bg_color').value);
+      code = code.replace('footer_text;', document.getElementById('footer_text').value);
+      code = code.replace('height_above_footer;', 'height: ' + document.getElementById('height_above_footer').value);
+      code = code.replace('ftext_color;', 'color: #' + document.getElementById('ftext_color').value);
+      code = code.replace('ftext_size;', 'font-size: ' + document.getElementById('ftext_size').value);
+      code = code.replace('booking_text;',document.getElementById('booking_text').value);
+
+      code = code.replace('social_url_1;', document.getElementById('social_url_1').value);
+      code = code.replace('social_url_2;', document.getElementById('social_url_2').value);
+      code = code.replace('social_url_3;', document.getElementById('social_url_3').value);
+      code = code.replace('social_url_4;', document.getElementById('social_url_4').value);
+      code = code.replace('social_url_5;', document.getElementById('social_url_5').value);
+
+      code = code.replace('social_img_1;', document.getElementById('social_img_1').value);
+      code = code.replace('social_img_2;', document.getElementById('social_img_2').value);
+      code = code.replace('social_img_3;', document.getElementById('social_img_3').value);
+      code = code.replace('social_img_4;', document.getElementById('social_img_4').value);
+      code = code.replace('social_img_5;', document.getElementById('social_img_5').value);
+
+      write_code();
+    }
+
+    function write_code() {
+      document.getElementById('display_code').style.display = 'block';
+      document.getElementById('display_code').value = code;
+      document.getElementById('testing').innerHTML = code;
+    }
+  </script>
+
+
+  <style type="text/css">
+    table {
+      text-align: center;
+      border-radius: 4px 4px 0 0;
+      -moz-border-radius: 4px 4px 0 0;
+      -webkit-border-radius: 4px 4px 0 0;
+      border-spacing: 0px;
+      mso-table-lspace: 0pt;
+      mso-table-rspace: 0pt;
+      -ms-text-size-adjust: 100%;
+      -webkit-text-size-adjust: 100%;
+    }
+  </style>
+</head>
+
+<body>
+
+  <center>
+    <table border="1" align="center">
+      <tr>
+        <td colspan="2" >
+          <h1 style="color:#ff9016; text-align:center">HTML Email Template Generator</h1>
+        </td>
+      </tr>
+      <tr>
+        <td style="border:2px solid #000;width:800px;">
+
+          <form class="" id="form" action="">
+            <table align="center" border="0" background="" cellpadding="15px" width="800px">
+
+              <tr>
+                <td>
+                  <label>Pre-Text : </label>
+                  <input type="text" name="" id="pre_text" style="width:600px" value="We miss you!">
+                </td>
+              </tr>
+
+              <tr>
+                <td>
+                  <label>Main bg-color : </label>
+                  #<input type="text" name="" id="main_bg_color" style="width:50px" value="ffffff">
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  <label>Outer border : </label>
+                  <input type="text" name="" id="out_border_px" style="width:25px" value="2"> px
+                  solid #<input type="text" name="" id="out_border_color" style="width:50px" value="000000">
+                </td>
+              </tr>
+
+              <tr>
+                <td>
+                  <label>Logo URL : </label>
+                  <input type="text" name="" id="logo_url" style="width:400px" value="https://soham.zenoti.com/temp_data/tempassetstore/5b64d629-163a-48e3-b271-1cbd111d49ee/customassetupload/18ccfd1e-5100-4773-89f7-d71097b0903f.png">
+                  &nbsp;&nbsp;&nbsp;&nbsp;
+                  <label for="">Heigth above logo : </label>
+                  <input type="text" name="" id="height_above_logo" style="width:25px" value="20"> px
+                </td>
+              </tr>
+
+              <tr>
+                <td>
+                  <label>Main image URL : </label>
+                  <input type="text" name="" id="img_url" style="width:380px" value="rahul2.jpg">
+                  &nbsp;&nbsp;&nbsp;&nbsp;
+                  <label for="">Heigth above image : </label>
+                  <input type="text" name="" id="height_above_img" style="width:25px" value="20"> px
+                </td>
+              </tr>
+
+              <tr>
+                <td>
+                  <label>Main text : </label>
+                  <input type="text" name="" id="main_text" style="width:600px" value="A lot has happened since you’ve been in to see us.<br><br>
+Take advantage of seasonal specials, limited-time offers and the services you know and love.<br><br> Come see what’s new. We can’t wait to see you.">
+                </td>
+              </tr>
+
+              <tr>
+                <td>
+                  <label>Main text color : </label>
+                  #<input type="text" name="" id="mtext_color" style="width:50px" value="000000">
+                  &nbsp;&nbsp;&nbsp;&nbsp;
+                  <label>Main text size : </label>
+                  <input type="text" name="" id="mtext_size" style="width:25px" value="18"> px
+                  &nbsp;&nbsp;&nbsp;&nbsp;
+                  <label>Height above main text : </label>
+                  <input type="text" name="" id="height_above_mtext" style="width:25px" value="50"> px
+                </td>
+              </tr>
+
+              <tr>
+                <td>
+                  <label>Booking text</label>
+                  <input type="text" id="booking_text" name="" value="BOOK ONLINE">
+                  &nbsp;&nbsp;&nbsp;&nbsp;
+                  <label>Booking link : </label>
+                  <input type="text" id="book_now_link" style="width:250px" name="" value="[BookNow]">
+                </td>
+              </tr>
+
+              <tr>
+                <td>
+                  <label>BookNow text color : </label>
+                  #<input type="text" name="" id="book_now_color" style="width:50px" value="000000">
+                  &nbsp;&nbsp;&nbsp;&nbsp;
+                  <label>BookNow bg-color : </label>
+                  #<input type="text" name="" id="book_now_bg_color" style="width:50px" value="ffffff">
+                </td>
+              </tr>
+
+              <tr>
+                <td>
+                  <label>BookNow border : </label>
+                  <input type="text" name="" id="book_now_border_px" style="width:25px" value="2"> px
+                  solid
+                  #<input type="text" name="" id="book_now_border_color" style="width:50px" value="000000">
+                  &nbsp;&nbsp;&nbsp;&nbsp;
+                  <label>Height above BookNow : </label>
+                  <input type="text" name="" id="height_above_book_now" style="width:25px" value="50"> px
+                </td>
+              </tr>
+
+              <tr>
+                <td>
+                  <label>Offer text above footer : </label>
+                  <input type="text" name="" id="offer_text" style="width:500px" value="*This offer is valid only for 14 days since it is in your inbox*">
+                </td>
+              </tr>
+
+              <tr>
+                <td>
+                  <label>Text above footer Color : </label>
+                  #<input type="text" name="" id="otext_color" style="width:50px" value="000000">
+                  &nbsp;&nbsp;&nbsp;&nbsp;
+                  <label>Text above footer size : </label>
+                  <input type="text" name="" id="otext_size" style="width:25px" value="14"> px
+                  &nbsp;&nbsp;&nbsp;&nbsp;
+                  <label>Height above footer text : </label>
+                  <input type="text" name="" id="height_above_otext" style="width:25px" value="50"> px
+                </td>
+              </tr>
+
+              <tr>
+                <td>
+                  <label>Footer bg-color : </label>
+                  #<input type="text" name="" id="footer_bg_color" style="width:50px" value="58585a">
+                  &nbsp;&nbsp;&nbsp;&nbsp;
+                  <label>Height above footer : </label>
+                  <input type="text" name="" id="height_above_footer" style="width:25px" value="50"> px
+                </td>
+              </tr>
+
+              <tr>
+                <td>
+                  <label>Footer text : </label>
+                  <input type="text" name="" id="footer_text" style="width:600px" value="© Copyrights 2019. All rights reserved.">
+                </td>
+              </tr>
+
+              <tr>
+                <td>
+                  <label>Footer text size : </label>
+                  <input type="text" name="" id="ftext_size" style="width:25px" value="14"> px
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  <label>Footer text color : </label>
+                  #<input type="text" name="" id="ftext_color" style="width:80px" value="ffffff">
+                </td>
+              </tr>
+
+              <tr>
+                <td>
+                  <label><b>Social media links : </b></label>
+                </td>
+              </tr>
+
+              <tr>
+                <td>
+                  <label>URL : </label>
+                  <input type="text" name="" id="social_url_1" style="width:250px" value="https://www.facebook.com/">
+                  &nbsp;&nbsp;&nbsp;&nbsp;
+                  <label>Logo : </label>
+                  <input type="text" name="" id="social_img_1" style="width:350px" value="https://soham.zenoti.com/temp_data/tempassetstore/5b64d629-163a-48e3-b271-1cbd111d49ee/customassetupload/06962997-50e9-45ea-831b-42b89883f517.png">
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <label>URL : </label>
+                  <input type="text" name="" id="social_url_2" style="width:250px" value="https://www.instagram.com/">
+                  &nbsp;&nbsp;&nbsp;&nbsp;
+                  <label>Logo : </label>
+                  <input type="text" name="" id="social_img_2" style="width:350px" value="https://soham.zenoti.com/temp_data/tempassetstore/5b64d629-163a-48e3-b271-1cbd111d49ee/customassetupload/bb9b22e4-d676-4764-aac1-792a11ba34b2.png">
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <label>URL : </label>
+                  <input type="text" name="" id="social_url_3" style="width:250px" value="https://www.twitter.com/">
+                  &nbsp;&nbsp;&nbsp;&nbsp;
+                  <label>Logo : </label>
+                  <input type="text" name="" id="social_img_3" style="width:350px" value="https://soham.zenoti.com/temp_data/tempassetstore/5b64d629-163a-48e3-b271-1cbd111d49ee/customassetupload/8c046104-c2e3-4195-8fc0-c044b5cb005a.png">
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <label>URL : </label>
+                  <input type="text" name="" id="social_url_4" style="width:250px" value="https://in.pinterest.com/">
+                  &nbsp;&nbsp;&nbsp;&nbsp;
+                  <label>Logo : </label>
+                  <input type="text" name="" id="social_img_4" style="width:350px" value="https://soham.zenoti.com/temp_data/tempassetstore/5b64d629-163a-48e3-b271-1cbd111d49ee/customassetupload/f78654ba-bdc8-45b9-9dcc-3104672cedf2.png">
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <label>URL : </label>
+                  <input type="text" name="" id="social_url_5" style="width:250px" value="https://www.youtube.com/">
+                  &nbsp;&nbsp;&nbsp;&nbsp;
+                  <label>Logo : </label>
+                  <input type="text" name="" id="social_img_5" style="width:350px" value="https://soham.zenoti.com/temp_data/tempassetstore/5b64d629-163a-48e3-b271-1cbd111d49ee/customassetupload/d4633bdf-74d1-430e-905f-204cd5d6eb79.png">
+                </td>
+              </tr>
+            </table>
+          </form>
+
+        </td>
+        <td style="border:2px solid #000;width:700px;">
+          <div class="">
+            <div id="testing" width="700px">
+
+            </div>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="2">
+          <textarea name="name" id="display_code" value="html code display" rows="20" cols="250" style="display:block"></textarea>
+        </td>
+      </tr>
+    </table>
+  </center>
+
+</body>
+
+</html>
