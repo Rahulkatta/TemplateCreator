@@ -736,7 +736,7 @@
       code = code.replace('height_above_footer;', 'height: ' + document.getElementById('height_above_footer').value);
       code = code.replace('ftext_color;', 'color: #' + document.getElementById('ftext_color').value);
       code = code.replace('ftext_size;', 'font-size: ' + document.getElementById('ftext_size').value);
-      code = code.replace('booking_text;',document.getElementById('booking_text').value);
+      code = code.replace('booking_text;', document.getElementById('booking_text').value);
 
       code = code.replace('social_url_1;', document.getElementById('social_url_1').value);
       code = code.replace('social_url_2;', document.getElementById('social_url_2').value);
@@ -758,6 +758,14 @@
       document.getElementById('display_code').value = code;
       document.getElementById('testing').innerHTML = code;
     }
+
+    function color(colorCode, name) {
+      document.getElementById(name).value = colorCode.slice(1, 7);
+    }
+
+    function picker(colorCode, name) {
+      document.getElementById(name).value = "#" + colorCode;
+    }
   </script>
 
 
@@ -773,6 +781,11 @@
       -ms-text-size-adjust: 100%;
       -webkit-text-size-adjust: 100%;
     }
+
+    label {
+      font-weight: 500;
+      font-family: Time New Roman;
+    }
   </style>
 </head>
 
@@ -781,7 +794,7 @@
   <center>
     <table border="1" align="center">
       <tr>
-        <td colspan="2" >
+        <td colspan="2">
           <h1 style="color:#ff9016; text-align:center">HTML Email Template Generator</h1>
         </td>
       </tr>
@@ -801,11 +814,13 @@
               <tr>
                 <td>
                   <label>Main bg-color : </label>
-                  #<input type="text" name="" id="main_bg_color" style="width:50px" value="ffffff">
+                  #<input type="text" name="main_bg_color_picker" id="main_bg_color" style="width:50px" onchange="picker(this.value,this.name)" value="ffffff">
+                  <input type="color" name="main_bg_color" id="main_bg_color_picker" style="width:20px;height:20px" onchange="color(this.value,this.name)" value="#ffffff">
                   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                   <label>Outer border : </label>
                   <input type="text" name="" id="out_border_px" style="width:25px" value="2"> px
-                  solid #<input type="text" name="" id="out_border_color" style="width:50px" value="000000">
+                  solid #<input type="text" name="out_border_color_picker" id="out_border_color" style="width:50px" onchange="picker(this.value,this.name)" value="000000">
+                  <input type="color" name="out_border_color" id="out_border_color_picker" style="width:20px;height:20px" onchange="color(this.value,this.name)" value="#000000">
                 </td>
               </tr>
 
@@ -832,15 +847,16 @@
               <tr>
                 <td>
                   <label>Main text : </label>
-                  <input type="text" name="" id="main_text" style="width:600px" value="A lot has happened since you’ve been in to see us.<br>
-Take advantage of seasonal specials, limited-time offers and the services you know and love. Come see what’s new. We can’t wait to see you.">
+                  <input type="text" name="" id="main_text" style="width:600px"
+                    value="A lot has happened since you’ve been in to see us.<br><br>Take advantage of seasonal specials, limited-time offers and the services you know and love. <br><br>Come see what’s new. We can’t wait to see you.">
                 </td>
               </tr>
 
               <tr>
                 <td>
                   <label>Main text color : </label>
-                  #<input type="text" name="" id="mtext_color" style="width:50px" value="000000">
+                  #<input type="text" name="mtext_color_picker" id="mtext_color" style="width:50px" onchange="picker(this.value,this.name)" value="000000">
+                  <input type="color" name="mtext_color" id="mtext_color_picker" style="width:20px;height:20px" onchange="color(this.value,this.name)" value="#000000">
                   &nbsp;&nbsp;&nbsp;&nbsp;
                   <label>Main text size : </label>
                   <input type="text" name="" id="mtext_size" style="width:25px" value="18"> px
@@ -863,10 +879,12 @@ Take advantage of seasonal specials, limited-time offers and the services you kn
               <tr>
                 <td>
                   <label>BookNow text color : </label>
-                  #<input type="text" name="" id="book_now_color" style="width:50px" value="000000">
+                  #<input type="text" name="book_now_color_picker" id="book_now_color" style="width:50px" onchange="picker(this.value,this.name)" value="000000">
+                  <input type="color" name="book_now_color" id="book_now_color_picker" style="width:20px;height:20px" onchange="color(this.value,this.name)" value="#000000">
                   &nbsp;&nbsp;&nbsp;&nbsp;
                   <label>BookNow bg-color : </label>
-                  #<input type="text" name="" id="book_now_bg_color" style="width:50px" value="ffffff">
+                  #<input type="text" name="book_now_bg_color_picker" id="book_now_bg_color" style="width:50px" onchange="picker(this.value,this.name)" value="ffffff">
+                  <input type="color" name="book_now_bg_color" id="book_now_bg_color_picker" style="width:20px;height:20px" onchange="color(this.value,this.name)" value="#ffffff">
                 </td>
               </tr>
 
@@ -874,8 +892,8 @@ Take advantage of seasonal specials, limited-time offers and the services you kn
                 <td>
                   <label>BookNow border : </label>
                   <input type="text" name="" id="book_now_border_px" style="width:25px" value="2"> px
-                  solid
-                  #<input type="text" name="" id="book_now_border_color" style="width:50px" value="000000">
+                  solid #<input type="text" name="book_now_border_color_picker" id="book_now_border_color" style="width:50px" onchange="picker(this.value,this.name)" value="000000">
+                  <input type="color" name="book_now_border_color" id="book_now_border_color_picker" style="width:20px;height:20px" onchange="color(this.value,this.name)" value="#000000">
                   &nbsp;&nbsp;&nbsp;&nbsp;
                   <label>Height above BookNow : </label>
                   <input type="text" name="" id="height_above_book_now" style="width:25px" value="50"> px
@@ -892,7 +910,8 @@ Take advantage of seasonal specials, limited-time offers and the services you kn
               <tr>
                 <td>
                   <label>Text above footer Color : </label>
-                  #<input type="text" name="" id="otext_color" style="width:50px" value="000000">
+                  #<input type="text" name="otext_color_picker" id="otext_color" style="width:50px" onchange="picker(this.value,this.name)" value="000000">
+                  <input type="color" name="otext_color" id="otext_color_picker" style="width:20px;height:20px" onchange="color(this.value,this.name)" value="#000000">
                   &nbsp;&nbsp;&nbsp;&nbsp;
                   <label>Text above footer size : </label>
                   <input type="text" name="" id="otext_size" style="width:25px" value="14"> px
@@ -905,7 +924,8 @@ Take advantage of seasonal specials, limited-time offers and the services you kn
               <tr>
                 <td>
                   <label>Footer bg-color : </label>
-                  #<input type="text" name="" id="footer_bg_color" style="width:50px" value="58585a">
+                  #<input type="text" name="footer_bg_color_picker" id="footer_bg_color" style="width:50px" onchange="picker(this.value,this.name)" value="58585a">
+                  <input type="color" name="footer_bg_color" id="footer_bg_color_picker" style="width:20px;height:20px" onchange="color(this.value,this.name)" value="#58585a">
                   &nbsp;&nbsp;&nbsp;&nbsp;
                   <label>Height above footer : </label>
                   <input type="text" name="" id="height_above_footer" style="width:25px" value="50"> px
@@ -925,7 +945,8 @@ Take advantage of seasonal specials, limited-time offers and the services you kn
                   <input type="text" name="" id="ftext_size" style="width:25px" value="14"> px
                   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                   <label>Footer text color : </label>
-                  #<input type="text" name="" id="ftext_color" style="width:80px" value="ffffff">
+                  #<input type="text" name="ftext_color_picker" id="ftext_color" style="width:50px" onchange="picker(this.value,this.name)" value="ffffff">
+                  <input type="color" name="ftext_color" id="ftext_color_picker" style="width:20px;height:20px" onchange="color(this.value,this.name)" value="#ffffff">
                 </td>
               </tr>
 
