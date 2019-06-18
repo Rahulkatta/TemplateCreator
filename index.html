@@ -514,7 +514,7 @@
                                           </tr>\n\
                                           <tr>\n\
                                             <td align=\"center\" class=\"flexibleContainerCell\" style=\"mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;\" valign=\"top\">\n\
-                                              <img src=\"logo_url\" alt=\"logo not found\" />\n\
+                                              <img src=\"logo_url\" alt=\"logo not found\" style=\"width:logo_width;px;max-width:100%\" width=\"logo_width;\" />\n\
                                             </td>\n\
                                           </tr>\n\
                                           <tr>\n\
@@ -522,7 +522,7 @@
                                           </tr>\n\
                                           <tr>\n\
                                             <td style=\"text-align:center;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;\">\n\
-                                              <img src=\"img_url\" alt=\"image not found\" />\n\
+                                              <img src=\"img_url\" alt=\"image not found\" style=\"width:img_width;px;max-width:100%\" width=\"img_width;\" />\n\
                                             </td>\n\
                                           </tr>\n\
                                           <tr>\n\
@@ -630,7 +630,7 @@
                                                                             <td\n\
                                                                               style=\"font-family: \'AvenirNextLTPro-Regular\',\'Avenir Next\',\'HelveticaNeue\',\'Helvetica Neue\',Helvetica,Arial,sans-serif; ftext_color;; ftext_size;px; text-align: center;line-height: 100%;padding-bottom: 8px;padding-top: 0px;padding-right: 25px;padding-left: 25px;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;\"\n\
                                                                               valign=\"middle\">\n\
-                                                                              <p style=\"ftext-size;px;\">\n\
+                                                                              <p style=\"ftext_size;px;\">\n\
                                                                                 footer_text;\n\
                                                                               </p>\n\
                                                                             </td>\n\
@@ -736,7 +736,9 @@
       code = code.replace('height_above_footer;', 'height: ' + document.getElementById('height_above_footer').value);
       code = code.replace('ftext_color;', 'color: #' + document.getElementById('ftext_color').value);
       code = code.replace('ftext_size;', 'font-size: ' + document.getElementById('ftext_size').value);
-      code = code.replace('booking_text;', document.getElementById('booking_text').value);
+      code = code.replace('booking_text;',document.getElementById('booking_text').value);
+      code = code.replace('logo_width;',document.getElementById('logo_width').value);
+      code = code.replace('img_width;',document.getElementById('img_width').value);
 
       code = code.replace('social_url_1;', document.getElementById('social_url_1').value);
       code = code.replace('social_url_2;', document.getElementById('social_url_2').value);
@@ -758,14 +760,6 @@
       document.getElementById('display_code').value = code;
       document.getElementById('testing').innerHTML = code;
     }
-
-    function color(colorCode, name) {
-      document.getElementById(name).value = colorCode.slice(1, 7);
-    }
-
-    function picker(colorCode, name) {
-      document.getElementById(name).value = "#" + colorCode;
-    }
   </script>
 
 
@@ -781,11 +775,6 @@
       -ms-text-size-adjust: 100%;
       -webkit-text-size-adjust: 100%;
     }
-
-    label {
-      font-weight: 500;
-      font-family: Time New Roman;
-    }
   </style>
 </head>
 
@@ -794,7 +783,7 @@
   <center>
     <table border="1" align="center">
       <tr>
-        <td colspan="2">
+        <td colspan="2" >
           <h1 style="color:#ff9016; text-align:center">HTML Email Template Generator</h1>
         </td>
       </tr>
@@ -814,21 +803,22 @@
               <tr>
                 <td>
                   <label>Main bg-color : </label>
-                  #<input type="text" name="main_bg_color_picker" id="main_bg_color" style="width:50px" onchange="picker(this.value,this.name)" value="ffffff">
-                  <input type="color" name="main_bg_color" id="main_bg_color_picker" style="width:20px;height:20px" onchange="color(this.value,this.name)" value="#ffffff">
+                  #<input type="text" name="" id="main_bg_color" style="width:50px" value="ffffff">
                   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                   <label>Outer border : </label>
                   <input type="text" name="" id="out_border_px" style="width:25px" value="2"> px
-                  solid #<input type="text" name="out_border_color_picker" id="out_border_color" style="width:50px" onchange="picker(this.value,this.name)" value="000000">
-                  <input type="color" name="out_border_color" id="out_border_color_picker" style="width:20px;height:20px" onchange="color(this.value,this.name)" value="#000000">
+                  solid #<input type="text" name="" id="out_border_color" style="width:50px" value="000000">
                 </td>
               </tr>
 
               <tr>
                 <td>
                   <label>Logo URL : </label>
-                  <input type="text" name="" id="logo_url" style="width:400px" value="https://soham.zenoti.com/temp_data/tempassetstore/5b64d629-163a-48e3-b271-1cbd111d49ee/customassetupload/18ccfd1e-5100-4773-89f7-d71097b0903f.png">
-                  &nbsp;&nbsp;&nbsp;&nbsp;
+                  <input type="text" name="" id="logo_url" style="width:300px" value="https://soham.zenoti.com/temp_data/tempassetstore/5b64d629-163a-48e3-b271-1cbd111d49ee/customassetupload/18ccfd1e-5100-4773-89f7-d71097b0903f.png">
+                  &nbsp;&nbsp;&nbsp;
+                  <label for="">width : </label>
+                  <input type="text" name="" id="logo_width" style="width:25px" value="350"> px
+                  &nbsp;&nbsp;&nbsp;
                   <label for="">Heigth above logo : </label>
                   <input type="text" name="" id="height_above_logo" style="width:25px" value="20"> px
                 </td>
@@ -837,8 +827,11 @@
               <tr>
                 <td>
                   <label>Main image URL : </label>
-                  <input type="text" name="" id="img_url" style="width:380px" value="https://soham.zenoti.com/temp_data/tempassetstore/5b64d629-163a-48e3-b271-1cbd111d49ee/customassetupload/a5129fac-4034-4f4c-9a9f-a97a071ff35e.png">
-                  &nbsp;&nbsp;&nbsp;&nbsp;
+                  <input type="text" name="" id="img_url" style="width:250px" value="https://soham.zenoti.com/temp_data/tempassetstore/5b64d629-163a-48e3-b271-1cbd111d49ee/customassetupload/a5129fac-4034-4f4c-9a9f-a97a071ff35e.png">
+                  &nbsp;&nbsp;&nbsp;
+                  <label for="">width : </label>
+                  <input type="text" name="" id="img_width" style="width:25px" value="700"> px
+                  &nbsp;&nbsp;&nbsp;
                   <label for="">Heigth above image : </label>
                   <input type="text" name="" id="height_above_img" style="width:25px" value="20"> px
                 </td>
@@ -847,16 +840,15 @@
               <tr>
                 <td>
                   <label>Main text : </label>
-                  <input type="text" name="" id="main_text" style="width:600px"
-                    value="A lot has happened since you’ve been in to see us.<br><br>Take advantage of seasonal specials, limited-time offers and the services you know and love. <br><br>Come see what’s new. We can’t wait to see you.">
+                  <input type="text" name="" id="main_text" style="width:600px" value="A lot has happened since you’ve been in to see us.<br>
+Take advantage of seasonal specials, limited-time offers and the services you know and love. Come see what’s new. We can’t wait to see you.">
                 </td>
               </tr>
 
               <tr>
                 <td>
                   <label>Main text color : </label>
-                  #<input type="text" name="mtext_color_picker" id="mtext_color" style="width:50px" onchange="picker(this.value,this.name)" value="000000">
-                  <input type="color" name="mtext_color" id="mtext_color_picker" style="width:20px;height:20px" onchange="color(this.value,this.name)" value="#000000">
+                  #<input type="text" name="" id="mtext_color" style="width:50px" value="000000">
                   &nbsp;&nbsp;&nbsp;&nbsp;
                   <label>Main text size : </label>
                   <input type="text" name="" id="mtext_size" style="width:25px" value="18"> px
@@ -879,12 +871,10 @@
               <tr>
                 <td>
                   <label>BookNow text color : </label>
-                  #<input type="text" name="book_now_color_picker" id="book_now_color" style="width:50px" onchange="picker(this.value,this.name)" value="000000">
-                  <input type="color" name="book_now_color" id="book_now_color_picker" style="width:20px;height:20px" onchange="color(this.value,this.name)" value="#000000">
+                  #<input type="text" name="" id="book_now_color" style="width:50px" value="000000">
                   &nbsp;&nbsp;&nbsp;&nbsp;
                   <label>BookNow bg-color : </label>
-                  #<input type="text" name="book_now_bg_color_picker" id="book_now_bg_color" style="width:50px" onchange="picker(this.value,this.name)" value="ffffff">
-                  <input type="color" name="book_now_bg_color" id="book_now_bg_color_picker" style="width:20px;height:20px" onchange="color(this.value,this.name)" value="#ffffff">
+                  #<input type="text" name="" id="book_now_bg_color" style="width:50px" value="ffffff">
                 </td>
               </tr>
 
@@ -892,8 +882,8 @@
                 <td>
                   <label>BookNow border : </label>
                   <input type="text" name="" id="book_now_border_px" style="width:25px" value="2"> px
-                  solid #<input type="text" name="book_now_border_color_picker" id="book_now_border_color" style="width:50px" onchange="picker(this.value,this.name)" value="000000">
-                  <input type="color" name="book_now_border_color" id="book_now_border_color_picker" style="width:20px;height:20px" onchange="color(this.value,this.name)" value="#000000">
+                  solid
+                  #<input type="text" name="" id="book_now_border_color" style="width:50px" value="000000">
                   &nbsp;&nbsp;&nbsp;&nbsp;
                   <label>Height above BookNow : </label>
                   <input type="text" name="" id="height_above_book_now" style="width:25px" value="50"> px
@@ -909,14 +899,13 @@
 
               <tr>
                 <td>
-                  <label>Text above footer Color : </label>
-                  #<input type="text" name="otext_color_picker" id="otext_color" style="width:50px" onchange="picker(this.value,this.name)" value="000000">
-                  <input type="color" name="otext_color" id="otext_color_picker" style="width:20px;height:20px" onchange="color(this.value,this.name)" value="#000000">
+                  <label>Offer text color : </label>
+                  #<input type="text" name="" id="otext_color" style="width:50px" value="000000">
                   &nbsp;&nbsp;&nbsp;&nbsp;
-                  <label>Text above footer size : </label>
+                  <label>Offer text footer size : </label>
                   <input type="text" name="" id="otext_size" style="width:25px" value="14"> px
                   &nbsp;&nbsp;&nbsp;&nbsp;
-                  <label>Height above footer text : </label>
+                  <label>Height above Offer text : </label>
                   <input type="text" name="" id="height_above_otext" style="width:25px" value="50"> px
                 </td>
               </tr>
@@ -924,8 +913,7 @@
               <tr>
                 <td>
                   <label>Footer bg-color : </label>
-                  #<input type="text" name="footer_bg_color_picker" id="footer_bg_color" style="width:50px" onchange="picker(this.value,this.name)" value="58585a">
-                  <input type="color" name="footer_bg_color" id="footer_bg_color_picker" style="width:20px;height:20px" onchange="color(this.value,this.name)" value="#58585a">
+                  #<input type="text" name="" id="footer_bg_color" style="width:50px" value="58585a">
                   &nbsp;&nbsp;&nbsp;&nbsp;
                   <label>Height above footer : </label>
                   <input type="text" name="" id="height_above_footer" style="width:25px" value="50"> px
@@ -945,8 +933,7 @@
                   <input type="text" name="" id="ftext_size" style="width:25px" value="14"> px
                   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                   <label>Footer text color : </label>
-                  #<input type="text" name="ftext_color_picker" id="ftext_color" style="width:50px" onchange="picker(this.value,this.name)" value="ffffff">
-                  <input type="color" name="ftext_color" id="ftext_color_picker" style="width:20px;height:20px" onchange="color(this.value,this.name)" value="#ffffff">
+                  #<input type="text" name="" id="ftext_color" style="width:80px" value="ffffff">
                 </td>
               </tr>
 
